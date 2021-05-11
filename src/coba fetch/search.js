@@ -7,7 +7,7 @@ import './home.css'
 
 export const Search = () => {
   const [status ,statusUpdate] = useState(false)
-  const fetchurl = "http://api-tomcatsquad.herokuapp.com/api/v1/youtube/?title="
+  const fetchurl = "https://api-tomcatsquad.herokuapp.com/api/v1/youtube/?title="
   const {id} = useParams()
   const [hasil, sethasil] = useState([])
   const [status2, status2update ] = useState(false)

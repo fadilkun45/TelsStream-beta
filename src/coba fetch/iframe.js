@@ -7,7 +7,7 @@ import moment from 'moment'
 export const Iframe = () => {
     let title= 'p'
     const {id} = useParams();
-    const fetchurl = "http://api-tomcatsquad.herokuapp.com/api/v1/youtube/?url="
+    const fetchurl = "https://api-tomcatsquad.herokuapp.com/api/v1/youtube/?url="
     const [hasil, sethasil] = useState([])
 
     useEffect( () => {

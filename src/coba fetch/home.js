@@ -20,7 +20,7 @@ class Home extends Component {
 
     componentDidMount() {
         this.state.muncul = true
-        axios.get('http://api-tomcatsquad.herokuapp.com/api/v1/youtube/')
+        axios.get('https://api-tomcatsquad.herokuapp.com/api/v1/youtube/')
         .then((res) => {
             this.setState(
                 this.state.result = res.data.results
