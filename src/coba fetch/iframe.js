@@ -26,7 +26,7 @@ export const Iframe = () => {
                 hasil.map(results => {
                     return <div>
                         <h1>{results.title}</h1>
-                        <h2>{moment(results.publish).format('LLL')}</h2>
+                        <h2>{moment(results.publish).format('ll')}</h2>
                         <p>{results.description}</p>
                     </div>
                 })
