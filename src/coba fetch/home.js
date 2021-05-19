@@ -29,18 +29,19 @@ class Home extends Component {
     }
 
     tes = (url) => {
-        this.props.history.push({ pathname: `/iframe/${url}` })
+        this.props.history.push({ pathname: `/watch?url=${url}` })
     }
 
     EnterHandle = (e) => {
         this.setState({ value: e.target.value })
         if (e.key === 'Enter') {
-            this.props.history.push({ pathname: `/search/${this.state.value}` })
+            this.props.history.push({ pathname: `/search?title=${this.state.value}` })
         }
     }
 
     handleKeyPress = (e) => {
-      
+        this.setState({value:e.target.value})
+        console.log(this.state.value)
     }
 
     loadMorehandle() {
@@ -56,7 +57,7 @@ class Home extends Component {
 
         return (
             <div>
-                <input type="text" onKeyPress={this.handleKeyPress} onKeyDown={this.EnterHandle} />
+                <input type="text" onKeyUp={this.handleKeyPress} onKeyDown={this.EnterHandle} />
                 <div className={this.state.muncul ? 'hilang' : 'muncul'} >
                     loading ngab
                 </div>

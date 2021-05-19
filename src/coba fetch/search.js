@@ -31,7 +31,7 @@ console.log(status)
   console.log(hasil.length)
   const history = useHistory()
   const tes = (url) => {
-    history.push({ pathname: `/iframe/${url}`} )
+    history.push({ pathname: `/watch?url=${url}`} )
   }
 
 

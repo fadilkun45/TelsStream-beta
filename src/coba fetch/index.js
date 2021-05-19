@@ -15,10 +15,10 @@ export default class index extends Component {
                     <Route path="/home">
                     <Home />
                     </Route>
-                    <Route path="/iframe/:id">
+                    <Route path="/watch?url=:id">
                     <Iframe />
                     </Route>
-                    <Route path="/search/:id" children={<Search />} >
+                    <Route path="/search?title=:id" children={<Search />} >
                         <Search />
                     </ Route >
                 </BrowserRouter>
