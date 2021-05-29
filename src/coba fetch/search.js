@@ -1,6 +1,6 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
-import {useHistory, useParams} from 'react-router-dom'
+import {useHistory, useLocation, useParams} from 'react-router-dom'
 import {VideoComponent} from './VideoComponent'
 import './home.css'
 
@@ -8,9 +8,12 @@ import './home.css'
 export const Search = () => {
   const [status ,statusUpdate] = useState(false)
   const fetchurl = "https://api-tomcatsquad.herokuapp.com/api/v1/youtube/?title="
-  const {id} = useParams()
+  let Search = useLocation()
+  const SearchParams = new URLSearchParams(Search["search"]) 
+  const id = SearchParams.get('title')
   const [hasil, sethasil] = useState([])
-
+console.log(id)
+console.log(Search["search"])
   useEffect( () => {
   axios.get(fetchurl + id)
   .then(res => {
@@ -32,6 +35,7 @@ console.log(status)
   const history = useHistory()
   const tes = (url) => {
     history.push({ pathname: `/watch?url=${url}`} )
+    window.location.reload()
   }
 
 

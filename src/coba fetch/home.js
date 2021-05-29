@@ -30,12 +30,14 @@ class Home extends Component {
 
     tes = (url) => {
         this.props.history.push({ pathname: `/watch?url=${url}` })
+        window.location.reload()
     }
 
     EnterHandle = (e) => {
         this.setState({ value: e.target.value })
         if (e.key === 'Enter') {
             this.props.history.push({ pathname: `/search?title=${this.state.value}` })
+            window.location.reload()
         }
     }
 
