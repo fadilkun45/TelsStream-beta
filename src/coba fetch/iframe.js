@@ -19,10 +19,11 @@ export const Iframe = () => {
         sethasil(res.data.results)
     })
     },[])
-    
+
     return (
               <div>
                 <iframe width="853" height="480" src={'https://www.youtube.com/embed/' + id }   title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="true"></iframe>
+                <p>{id}</p>
                 {
                 hasil.map(results => {
                     return <div>
