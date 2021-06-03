@@ -20,7 +20,7 @@ class Home extends Component {
 
     componentDidMount() {
         this.state.muncul = true
-        axios.get('https://api-tomcatsquad.herokuapp.com/api/v1/youtube/')
+        axios.get('https://api-tomcatsquad.herokuapp.com/api/v1/video/')
             .then((res) => {
                 this.setState(
                     this.state.result = res.data.results
@@ -67,7 +67,7 @@ class Home extends Component {
                     <Fragment>
                     {
                         this.state.result.slice(0, this.state.visible).map((result) => {
-                            return <VideoComponent title={result.title} url={result.url} klik={this.tes} />
+                            return <VideoComponent title={result.title} url={result.id} klik={this.tes} />
                         })
                     }
                     </Fragment>
