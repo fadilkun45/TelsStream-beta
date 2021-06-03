@@ -9,7 +9,7 @@ export const Iframe = () => {
     let title= 'p'
     let Search = useLocation()
     const SearchParams = new URLSearchParams(Search["search"])
-    const tes = SearchParams.get('url')
+    const tes = SearchParams.get('id')
     const  id = useParams() 
     // const id = Search["search"]
     const fetchurl = "http://api-tomcatsquad.herokuapp.com/api/v1/video/?id="

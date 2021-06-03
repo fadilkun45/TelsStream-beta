@@ -29,7 +29,7 @@ class Home extends Component {
     }
 
     tes = (url) => {
-        this.props.history.push({ pathname: `/watch?url=${url}` })
+        this.props.history.push({ pathname: `/watch?id=${url}` })
         window.location.reload()
     }
 
