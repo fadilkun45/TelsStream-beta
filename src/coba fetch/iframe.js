@@ -12,7 +12,7 @@ export const Iframe = () => {
     const tes = SearchParams.get('id')
     const  id = useParams() 
     // const id = Search["search"]
-    const fetchurl = "http://api-tomcatsquad.herokuapp.com/api/v1/video/?id="
+    const fetchurl = "https://api-tomcatsquad.herokuapp.com/api/v1/video/?id="
     const [hasil, sethasil] = useState([])
     console.log(id)
     useEffect(() => {
